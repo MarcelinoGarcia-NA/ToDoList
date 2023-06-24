@@ -1,15 +1,10 @@
 
 "use client"
-
-
-interface list{
-    id:number,
-    text: string,
-    isActive: boolean
-}
+import Todo from "./components/Todo"
+import todo from "./types/todo"
 
 const getList = () => {
-    const toDoList:list[]= [
+    const toDoList:todo[] = [
       {
         id: 1,
         text: 'Faxina em casa!',
@@ -17,7 +12,7 @@ const getList = () => {
       },
       {
         id: 2,
-        text: 'Lavar o crro!',
+        text: 'Lavar o carro!',
         isActive: true,
       }
     ]
@@ -25,15 +20,11 @@ const getList = () => {
 };
 
 export default async function Home() {
-  const toDoList = getList();
+  const toDoList:todo[] = getList();
   return (
     <main>
-      <>Hello Word!</>
-      {toDoList.map(todo=>(
-          <div key={todo.id}>
-              <p>{todo.text}</p>
-          </div>
-        ))}
+      <h1>Lista de a fazeres</h1>
+      <Todo props={toDoList}/>
     </main>
   )
 }
