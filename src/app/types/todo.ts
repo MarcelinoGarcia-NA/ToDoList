@@ -3,3 +3,4 @@ export default interface todo{
     text: string,
     isActive: boolean
 };
+
