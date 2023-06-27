@@ -1,6 +1,6 @@
 
 "use client"
-import Todo from "./components/Todo";
+import Todo from "./components/todo";
 import TodoForm from "./components/TodoForm";
 import todo from "./types/todo"
 import { useState } from "react";
@@ -10,12 +10,12 @@ export default function Home() {
     {
       id: 1,
       text: 'Faxina em casa!',
-      isActive: true,
+      isActive: false,
     },
     {
       id: 2,
       text: 'Lavar o carro!',
-      isActive: true,
+      isActive: false,
     }
   ]);
 
